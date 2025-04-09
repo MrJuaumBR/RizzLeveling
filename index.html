@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./data/css/style.css">
+        <title>Rizz Leveling</title>
+    </head>
+    <body>
+        <canvas id="canvas" width="1080" height="720"></canvas>
+        <div class="container">
+            <div class="header">
+                <h1>Welcome to the <span class="rainbow">Rizz System</span></h1>
+                <h3>Your best friend in <span class="rainbow">Rizz Aura Earning</span> (RAE)</h3>
+            </div>
+            <div class="content">
+                <div class="card glow" id="user">
+                    <div class="info">
+                        <img class="avatar glow" src="./data/assets/user.png">
+                        <span class="user">Jose Maria Sungjin</span>
+                        <span class="level">Rizz Level 999+</span>
+                        <span class="title">The Rizz Master</span>
+                    </div>
+                    <hr>
+                    <div class="stats">
+                        <h2>Stats</h2>
+                        <div class="data">
+                            <div class="stat tooltip">
+                                <span class="tooltiptext">Attack</span>
+                                <span class="stat-label">Mewing</span>
+                                <span class="stat-value gradient-blue">999</span>
+                            </div>
+                            <div class="stat tooltip">
+                                <span class="tooltiptext">Defense</span>
+                                <span class="stat-label">Skibidi</span>
+                                <span class="stat-value gradient-blue">999</span>
+                            </div>
+                            <div class="stat tooltip">
+                                <span class="tooltiptext">Speed</span>
+                                <span class="stat-label">Ohio</span>
+                                <span class="stat-value gradient-blue">999</span>
+                            </div>
+                            <div class="stat tooltip">
+                                <span class="tooltiptext">Mana</span>
+                                <span class="stat-label">Aura</span>
+                                <span class="stat-value gradient-blue">999</span>
+                            </div>
+                            <div class="stat tooltip">
+                                <span class="tooltiptext">Inteligence</span>
+                                <span class="stat-label">Sigma</span>
+                                <span class="stat-value gradient-blue">999</span>
+                            </div>
+                            <div class="stat tooltip">
+                                <span class="tooltiptext">Charisma</span>
+                                <span class="stat-label">Rizz</span>
+                                <span class="stat-value gradient-blue">999</span>
+                            </div>
+                            <div class="stat tooltip">
+                                <span class="tooltiptext">Luck</span>
+                                <span class="stat-label">Mangos</span>
+                                <span class="stat-value gradient-blue">999</span>
+                            </div>
+                            <div class="stat tooltip">
+                                <span class="tooltiptext">Masculinity</span>
+                                <span class="stat-label">Woke</span>
+                                <span class="stat-value gradient-blue">999</span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="skills">
+                        <h2>Skills</h2>
+                        <ul type="None">
+                            <li>
+                                <div class="tooltip">
+                                    <div class="tooltiptext">
+                                        <b>Descrição:</b> Um olhar intenso de 2 segundos, geralmente em silêncio absoluto.<br><br>
+                                        <b>Efeito:</b> 80% chance de fazer o alvo desviar o olhar + 30% Atração.
+                                    </div>
+                                    Sigma Glare
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tooltip">
+                                    <div class="tooltiptext">
+                                        <b>Descrição:</b> Com uso de Aura, simula visualmente um estado seminu na mente do alvo por 0.7s.<br><br>
+                                        <b>Efeito:</b> Requer 40 Aura. Causa Explosão Mental. Cooldown: 1h.
+                                    </div>
+                                    Aura Undress
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tooltip">
+                                    <div class="tooltiptext">
+                                        <b>Descrição:</b> Combina: olhar → elogio → toque → silêncio.<br><br>
+                                        <b>Efeito:</b> Multiplica o impacto de seu rizz em 2x. Alto risco.
+                                    </div>
+                                    Rizz Chain Combo
+                                </div>
+                            </li>
+                            <li>
+                            <div class="tooltip">
+                                <div class="tooltiptext">
+                                    <b>Descrição:</b> Ativa o máximo potencial de todos os atributos sedutores de Jose Maria.<br><br>
+                                    <b>Efeito:</b> +100% em Aura, Sigma, Rizz, Skibidi, Mangos, Ohio e Woke durante 1 minuto e 30 segundos. Efeito devastador.
+                                </div>
+                                Full Rizz Drive
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./data/js/lightning.js">
+            const height = document.body.offsetHeight;
+            const width = document.body.offsetWidth;
+            const cvs = document.getElementById('canvas');
+            cvs.setAttribute("height", height);
+            cvs.setAttribute("width", width);
+        </script>
+    </body>
+</html>
