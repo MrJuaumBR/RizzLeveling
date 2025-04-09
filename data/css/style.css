@@ -95,47 +95,6 @@ div.card{
     }
 }
 
-@media screen and (max-width: 600px) {
-    div.header {
-        h1{
-            font-size: 18vw;
-        }
-
-        h3{
-            font-size: 5vw;
-        }
-    }
-
-    span.hover1:hover{
-        transform: scale(1.1);
-        font-size: scale(1.1);
-    }
-
-    #user{
-        div.info{
-            img.avatar{
-                width: 25vw;
-                height: 25vw;
-                top: 50%;
-                left: 5%;
-                translate: 0 -50%;
-
-            }
-
-            span.user{
-                font-size: 10vw;
-                top: 50%;
-                left: 17%;
-                translate: 0 -50%;
-            }
-
-    
-            span.level{
-                font-size: 3vw;
-            }
-        }
-    }
-}
 
 .rainbow {
     background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
@@ -268,7 +227,7 @@ span.hover1:hover {
 
     div.stats{
         position: relative;
-        height: 15vw;
+        height: 22vw;
         h2{
             position: absolute;
             font-family: 'Manga';
@@ -300,7 +259,7 @@ span.hover1:hover {
     }
 
     div.data{
-        padding-top: 5vw;
+        padding-top: 10vw;
         font-family: Arial, Helvetica, sans-serif;
         position: absolute;
         top: 50%;
@@ -428,4 +387,141 @@ div.skills ul {
   
 .tooltip:hover .tooltiptext {
     visibility: visible;
+}
+
+@media only screen and (max-width: 768px) {
+
+
+    div.content {
+        height: auto;
+        min-height: 40em;
+        max-height: 50em;
+    }
+    div.card{
+        min-height: 30em;
+        max-height: 45em;
+        height: auto;
+    }
+
+
+    div.header {
+        h1{
+            font-size: 18vw;
+        }
+
+        h3{
+            font-size: 5vw;
+        }
+    }
+
+    span.hover1:hover{
+        transform: scale(1.1);
+        font-size: scale(1.1);
+    }
+
+    #user{
+        h2{
+            font-size: 15vw;
+        }
+        div.stats{
+            height: 40vw;
+            width: 100%;
+            h2{
+                font-size: 4vw;
+            }
+            div.data{
+                grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
+                top: 65%;
+                left: 50%;
+                translate: -50% -50%;
+                margin-top: 8vw;
+                width: 100%;
+                text-align: center;
+                div.stat span{
+                    text-align: center;
+                    width: auto;
+                    height: 5vw;
+                    padding: 1vw;
+                    font-size: 4vw;
+                }
+            }
+        }
+
+        div.skills{
+            h2{
+                font-size: 4vw;
+            }
+            ul{
+                padding-top: 5vw;
+                padding-left: 1vw;
+                padding-right: 1vw;
+            }
+            ul li {;
+                width: auto;
+                .tooltip{
+                    font-size: 4vw;
+                    height: 5vw;
+                    padding-bottom: 1vw;
+                    padding-top: 1vw;
+
+                }
+            }
+        }
+
+        /* Adjust the width and height of the user info container */
+        div.info {
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: 11vw;
+        max-height: 20vw;
+        gap: 0;
+        padding: 0;
+        padding-bottom: 7em;
+        text-align: center;
+
+        /* Adjust the avatar size and position */
+        img.avatar {
+            width: 15vw;
+            height: 15vw;
+            top: 0.5em;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+
+        /* Adjust the user name and level font sizes and positions */
+        span.user {
+            font-size: 4vw;
+            top: 3.9em;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+
+        span.level {
+            font-size: 2.25vw;
+            top: 10em;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+
+        span.title {
+            font-size: 1.9vw;
+            font-weight: 100;
+            top: 14.5em;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        }
+    }
+
+    .tooltip .tooltiptext{
+        width: 20vw;
+    }
+
+    .tooltip div.tooltiptext{
+        padding: 0;
+        width: 40vw;
+        font-size: 5vw;
+        z-index: 100;
+    }
 }
