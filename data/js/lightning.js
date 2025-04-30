@@ -1,8 +1,8 @@
 const canvas = document.getElementById("canvas");
 const context = canvas.getContext('2d');
 const lightningStrikeOffset = 5;
-const lightningStrikeLength = 100;
-const lightningBoltLength = 5;
+const lightningStrikeLength = 1500;
+const lightningBoltLength = 50;
 const lightningThickness = 4;
 const canvasHeight = canvas.height;
 const canvasWidth = canvas.width;
@@ -51,7 +51,7 @@ class Lightning {
   }
 }
 
-const interval = 3000;
+const interval = 1500;
 // const lightningStrikeOffset = 5;
 // const lightningStrikeLength = 100;
 // const lightningBoltLength = Math.random() * 10;

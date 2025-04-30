@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -72,47 +72,55 @@
                     <hr>
                     <div class="skills">
                         <h2>Skills</h2>
-                        <ul type="None">
-                            <li>
-                                <div class="tooltip">
-                                    <div class="tooltiptext">
-                                        <b>Descrição:</b> Um olhar intenso de 2 segundos, geralmente em silêncio absoluto.<br><br>
-                                        <b>Efeito:</b> 80% chance de fazer o alvo desviar o olhar + 30% Atração.
-                                    </div>
-                                    Sigma Glare
-                                </div>
-                            </li>
-                            <li>
-                                <div class="tooltip">
-                                    <div class="tooltiptext">
-                                        <b>Descrição:</b> Com uso de Aura, simula visualmente um estado seminu na mente do alvo por 0.7s.<br><br>
-                                        <b>Efeito:</b> Requer 40 Aura. Causa Explosão Mental. Cooldown: 1h.
-                                    </div>
-                                    Aura Undress
-                                </div>
-                            </li>
-                            <li>
-                                <div class="tooltip">
-                                    <div class="tooltiptext">
-                                        <b>Descrição:</b> Combina: olhar → elogio → toque → silêncio.<br><br>
-                                        <b>Efeito:</b> Multiplica o impacto de seu rizz em 2x. Alto risco.
-                                    </div>
-                                    Rizz Chain Combo
-                                </div>
-                            </li>
-                            <li>
-                            <div class="tooltip">
+                        <div id="skills-list">
+                        
+                            <div class="skill tooltip">
                                 <div class="tooltiptext">
-                                    <b>Descrição:</b> Ativa o máximo potencial de todos os atributos sedutores de Jose Maria.<br><br>
-                                    <b>Efeito:</b> +100% em Aura, Sigma, Rizz, Skibidi, Mangos, Ohio e Woke durante 1 minuto e 30 segundos. Efeito devastador.
+                                    <b>Description:</b> An intense 2-second stare, usually in absolute silence.<br><br>
+                                    <b>Effect:</b> 80% chance to make target look away + 30% Attraction.
+                                </div>
+                                Sigma Glare
+                            </div>
+                    
+                            <div class="skill tooltip">
+                                <div class="tooltiptext">
+                                    <b>Description:</b> Using Aura, visually simulates a semi-naked state in the target's mind for 0.7s.<br><br>
+                                    <b>Effect:</b> Requires 40 Aura. Causes Mind Blast. Cooldown: 1h.
+                                </div>
+                                Aura Undress
+                            </div>
+                            <div class="skill tooltip">
+                                <div class="tooltiptext">
+                                    <b>Description:</b> Combination: look → praise → touch → silence.<br><br>
+                                    <b>Effect:</b> Multiplies the impact of your rizz by 2x. High risk.
+                                </div>
+                                Rizz Chain Combo
+                            </div>
+                            <div class="skill tooltip">
+                                <div class="tooltiptext">
+                                    <b>Description:</b> Activates the maximum potential of all of Jose Maria's seductive attributes.<br><br>
+                                    <b>Effect:</b> +100% to Aura, Sigma, Rizz, Skibidi, Mangos, Ohio and Woke for 1 minute and 30 seconds. Devastating effect.
                                 </div>
                                 Full Rizz Drive
                             </div>
-                        </ul>
+                        </div>
                     </div>
+                    <hr>
+                    <div class="inventory">
+                        <h2>Inventory</h2>
+                        <button class="expand-button">+</button>
+                        <div class="items" id="inventory-items">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <span>Time: <span id="time-clock">00:00</span></span>
                 </div>
             </div>
         </div>
+        <script src="./data/js/clock.js"></script>
+        <script src="./data/js/inventory-load.js"></script>
         <script src="./data/js/lightning.js">
             const height = document.body.offsetHeight;
             const width = document.body.offsetWidth;

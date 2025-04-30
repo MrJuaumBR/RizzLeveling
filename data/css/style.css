@@ -1,527 +1,681 @@
-@font-face {
-    font-family: 'SoloLeveling';
-    src: url("../assets/sololeveling.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
-
-
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
 
 @font-face {
-    font-family: 'Manga';
-    src: url("../assets/mangat.ttf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "SoloLeveling";
+  src: url("../assets/sololeveling.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Spooky';
-    src: url("../assets/spooky.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Manga";
+  src: url("../assets/mangat.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-:root{
-    font-family: 'SoloLeveling', 'Manga', sans-serif, Arial;
-    /* Background Colors */
-    --bg-primary: #0e1319; /* Dark, muted blue for backgrounds */
-    --bg-secondary: #172d37; /* Slightly lighter blue for secondary backgrounds */
-    --bg-tertiary: #F7F7F7; /* Light gray for highlights and accents */
-    
-    /* Border Colors */
-    --border-primary: #0340ba; /* Dark gray for borders and outlines */
-    --border-secondary: #02123d; /* Medium gray for secondary borders and outlines */
-    
-    /* Foreground Colors */
-    --text-primary: #FFFFFF; /* White for primary text */
-    --text-secondary: #9ab1ec; /* Light beige for secondary text */
-    --text-tertiary: #6779ef; /* Dark green for highlights and accents */
-    --text-quaternary: #4d15db; /* Dark gray for subtle text and hints */
-}
-body{
-    background-color: var(--bg-primary);
+@font-face {
+  font-family: "Spooky";
+  src: url("../assets/spooky.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
+:root {
+  font-family: "SoloLeveling", "Manga", sans-serif, Arial;
+  /* Background Colors */
+  --bg-primary: #0e1319; /* Dark, muted blue for backgrounds */
+  --bg-primary-rgb: 14, 19, 25;
+  --bg-secondary: #172d37; /* Slightly lighter blue for secondary backgrounds */
+  --bg-secondary-rgb: 23, 45, 55;
+  --bg-tertiary: #f7f7f7; /* Light gray for highlights and accents */
+  --bg-tertiary-rgb: 247, 247, 247;
+
+  /* Border Colors */
+  --border-primary: #0340ba; /* Dark gray for borders and outlines */
+  --border-secondary: #02123d; /* Medium gray for secondary borders and outlines */
+
+  /* Foreground Colors */
+  --text-primary: #ffffff; /* White for primary text */
+  --text-secondary: #9ab1ec; /* Light beige for secondary text */
+  --text-tertiary: #6779ef; /* Dark green for highlights and accents */
+  --text-quaternary: #4d15db; /* Dark gray for subtle text and hints */
+}
+body {
+  background-color: var(--bg-primary);
+}
 
 div.header {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    h1{
-        font-family: 'SoloLeveling';
-        font-size: 8vw;
-        font-weight: 200;
-        color: var(--text-primary);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    font-family: "SoloLeveling";
+    font-size: 8vw;
+    font-weight: 200;
+    color: var(--text-primary);
 
-        text-shadow: 5px 5px 7px rgba(150,60,130, 0.7);
+    text-shadow: 5px 5px 7px rgba(150, 60, 130, 0.7);
 
+    user-select: none;
 
-        user-select: none;
+    animation: SmoothShake 3s infinite ease-in-out;
 
-        animation: SmoothShake 3s infinite ease-in-out;
+    margin-bottom: 0em;
+  }
 
-        margin-bottom: 0em;
-    }
+  h3 {
+    font-family: "Manga";
+    color: var(--text-secondary);
+    opacity: 0.5;
 
-    h3{
-        font-family: 'Manga';
-        color: var(--text-secondary);
-        opacity: 0.5;
-        
-        font-style: oblique;
-    }
+    font-style: oblique;
+  }
 
-    transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
 }
 
-div.card{
-    background-color: var(--bg-secondary);
-    border-radius: 1em;
-    padding: 2em;
-    margin: 1em;
-    transition: all 0.35s ease-in-out;
+div.card {
+  background: rgba(var(--bg-secondary-rgb), 0.8);
+  border-radius: 1em;
+  padding: 2em;
+  margin: 1em;
+  transition: all 0.35s ease-in-out;
 }
 
 @keyframes SmoothShake {
-    0%, 100% {
-        transform: translateY(-0.7vw);
-        transform: rotate(1deg);
-        text-shadow: 5px 5px 7px rgba(150,60,130, 0.7);
-    }
-    50% {
-        transform: translateY(0.7vw);
-        transform: rotate(-1deg);
-        text-shadow: 7px 7px 7px rgba(150,60,130, 0.7);
-    }
+  0%,
+  100% {
+    transform: translateY(-0.7vw);
+    transform: rotate(1deg);
+    text-shadow: 5px 5px 7px rgba(150, 60, 130, 0.7);
+  }
+  50% {
+    transform: translateY(0.7vw);
+    transform: rotate(-1deg);
+    text-shadow: 7px 7px 7px rgba(150, 60, 130, 0.7);
+  }
 }
 
-
 .rainbow {
-    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: rainbow_animation 6s ease-in-out infinite;
-    background-size: 400% 100%;
+  background: linear-gradient(
+    to right,
+    #6666ff,
+    #0099ff,
+    #00ff00,
+    #ff3399,
+    #6666ff
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow_animation 6s ease-in-out infinite;
+  background-size: 400% 100%;
 }
 
 .glow {
-    background-color: #000;
-    border: 2px solid #000;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  background-color: #000;
+  border: 2px solid #000;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 
-    animation: SmoothColor 6s infinite ease-in-out;
+  animation: SmoothColor 6s infinite ease-in-out;
 }
 
 hr {
-    border-color: hsl(204, 100%, 20%);
+  border-color: hsl(204, 100%, 20%);
 
-    animation: SmoothColor 6s infinite ease-in-out;
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 0;
+  animation: SmoothColor 6s infinite ease-in-out;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
 }
 
 @keyframes SmoothColor {
-    0%, 100% {
-        border-color: #6666ff;
-        box-shadow: 0 0 20px rgba(102, 102, 255, 0.5);
-    }
-    25% {
-        border-color: #0099ff;
-        box-shadow: 0 0 20px rgba(0, 153, 255, 0.5);
-    }
-    50% {
-        border-color: #00ff00;
-        box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
-    }
-    75% {
-        border-color: #ff3399;
-        box-shadow: 0 0 20px rgba(255, 51, 153, 0.5);
-    }
+  0%,
+  100% {
+    border-color: #6666ff;
+    box-shadow: 0 0 20px rgba(102, 102, 255, 0.5);
+  }
+  25% {
+    border-color: #0099ff;
+    box-shadow: 0 0 20px rgba(0, 153, 255, 0.5);
+  }
+  50% {
+    border-color: #00ff00;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+  }
+  75% {
+    border-color: #ff3399;
+    box-shadow: 0 0 20px rgba(255, 51, 153, 0.5);
+  }
 }
 
 span.hover1 {
-    opacity: 0.9;
-    transition: all 0.35s ease-in-out;
+  opacity: 0.9;
+  transition: all 0.35s ease-in-out;
 }
 
 span.hover1:hover {
-    opacity: 1;
-    transform: scale(1.07);
-    font-size: scale(1.07);
+  opacity: 1;
+  transform: scale(1.07);
+  font-size: scale(1.07);
 }
 
 @keyframes rainbow_animation {
-    0%,100% {
-        background-position: 0 0;
-    }
+  0%,
+  100% {
+    background-position: 0 0;
+  }
 
-    50% {
-        background-position: 100% 0;
-    }
+  50% {
+    background-position: 100% 0;
+  }
 }
 
-#user{
-    user-select: none;
-    div.info{
-        height: 11vw;
-        position: relative;
+#user {
+  user-select: none;
+  height: auto;
+  div.info {
+    height: 11vw;
+    position: relative;
 
-        img.avatar{
-            position: absolute;
-            border-radius: 50%;
-            width: 10vw;
-            height: 10vw;
-            top: 50%;
-            left: 5%;
-            translate: 0 -50%;
-        }
-        span.user{
-            position: absolute;
-            font-family: 'Manga';
-            font-size: 2vw;
-            font-weight: 200;
-            color: var(--text-primary);
-            text-shadow: 5px 5px 7px rgba(150,60,130, 0.7);
-            margin: 0;
+    img.avatar {
+      position: absolute;
+      border-radius: 50%;
+      width: 10vw;
+      height: 10vw;
+      top: 50%;
+      left: 5%;
+      translate: 0 -50%;
+    }
+    span.user {
+      position: absolute;
+      font-family: "Manga";
+      font-size: 2vw;
+      font-weight: 200;
+      color: var(--text-primary);
+      text-shadow: 5px 5px 7px rgba(150, 60, 130, 0.7);
+      margin: 0;
 
-            top: 50%;
-            left: 17%;
-            translate: 0 -50%;
-        }
-
-        span.level{
-            position: absolute;
-            font-family: 'Manga';
-            font-size: 1vw;
-            font-weight: 200;
-            color: var(--text-secondary);
-            text-shadow: 5px 5px 7px rgba(150,60,130, 0.7);
-            margin: 0;
-
-            opacity: 0.7;
-
-            top: 68%;
-            left: 18%;
-            translate: 0 -50%;
-        }
-        span.title{
-            position: absolute;
-            font-family: 'Spooky';
-            font-size: 0.8vw;
-            font-weight: 10;
-            color: var(--text-secondary);
-            text-shadow: 5px 5px 7px rgba(150,60,130, 0.7);
-            margin: 0;
-
-            opacity: 0.7;
-
-            top: 45%;
-            left: 42%;
-            translate: 0 -50%;
-        }
-
+      top: 50%;
+      left: 17%;
+      translate: 0 -50%;
     }
 
-    div.stats{
-        position: relative;
-        height: 22vw;
-        h2{
-            position: absolute;
-            font-family: 'Manga';
-            font-size: 2vw;
-            font-weight: 200;
-            color: var(--text-primary);
-            text-shadow: 5px 5px 7px rgba(150,60,130, 0.7);
-            margin: 0;
+    span.level {
+      position: absolute;
+      font-family: "Manga";
+      font-size: 1vw;
+      font-weight: 200;
+      color: var(--text-secondary);
+      text-shadow: 5px 5px 7px rgba(150, 60, 130, 0.7);
+      margin: 0;
 
-            translate: -50% 0;
-            left: 50%;
-        }
+      opacity: 0.7;
+
+      top: 68%;
+      left: 18%;
+      translate: 0 -50%;
     }
+    span.title {
+      position: absolute;
+      font-family: "Spooky";
+      font-size: 0.8vw;
+      font-weight: 10;
+      color: var(--text-secondary);
+      text-shadow: 5px 5px 7px rgba(150, 60, 130, 0.7);
+      margin: 0;
 
-    div.skills{
-        height: auto;
-        h2{
-            position: absolute;
-            font-family: 'Manga';
-            font-size: 2vw;
-            font-weight: 200;
-            color: var(--text-primary);
-            text-shadow: 5px 5px 7px rgba(150,60,130, 0.7);
-            margin: 0;
+      opacity: 0.7;
 
-            translate: -50% 0;
-            left: 50%;
-        }
+      top: 45%;
+      left: 42%;
+      translate: 0 -50%;
     }
+  }
 
-    div.data{
-        padding-top: 10vw;
-        font-family: Arial, Helvetica, sans-serif;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        translate: -50% -50%;
+  div.stats {
+    position: relative;
+    height: 22vw;
+    h2 {
+      position: absolute;
+      font-family: "Manga";
+      font-size: 2vw;
+      font-weight: 200;
+      color: var(--text-primary);
+      text-shadow: 5px 5px 7px rgba(150, 60, 130, 0.7);
+      margin: 0;
 
-        color: #fff;
-
-        display: grid;
-        grid-template-columns: 0.5fr 0.5fr;
-        grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
-        gap: 10px 10px;
-        padding-bottom: 2vw;
-
-        div.stat{
-            border: 0.1px solid rgba(20,20,20, 0.9);
-            background-color: rgba(50, 60, 90, 0.8);
-            box-shadow: 5px 5px 7px rgba(50,0,30, 0.7);
-            border-radius: 1em;
-            margin-left: 0.9vw;
-            margin-right: 0.9vw;
-            padding: 0.3vw;
-            width: 6vw;
-            padding-left: 2vw;
-            padding-right: 2vw;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            span.stat-label{
-                font-size: 0.9vw;
-                font-weight: 200;
-                color: var(--text-primary);
-            }
-
-            span.stat-value{
-                font-size: 0.8vw;
-                font-weight: 200;
-            }
-        }
+      translate: -50% 0;
+      left: 50%;
     }
-}
+  }
 
-div.skills ul {
+  div.skills {
+    height: auto;
+    h2 {
+      position: absolute;
+      font-family: "Manga";
+      font-size: 2vw;
+      font-weight: 200;
+      color: var(--text-primary);
+      text-shadow: 5px 5px 7px rgba(150, 60, 130, 0.7);
+      margin: 0;
+
+      translate: -50% 0;
+      left: 50%;
+    }
+  }
+
+  div.data {
+    padding-top: 10vw;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.8vw;
-    font-weight: 200;
-    color: #fff;
-    width: 100%;
-    padding-top: 0.3vw;
-    padding-bottom: 0.5vw;
-    li{
-        border: 0.1px solid rgba(20,20,20, 0.9);
-        background-color: rgba(50, 60, 90, 0.8);
-        box-shadow: 5px 5px 7px rgba(50,0,30, 0.7);
-        border-radius: 1em;
-        margin-left: 0.9vw;
-        margin-right: 0.9vw;
-        margin-bottom: 1vw;
-        padding: 0.3vw;
-        width: 7vw;
-        height: 4vw;
-        padding-left: 2vw;
-        padding-right: 2vw;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-.gradient-blue {
-    background: linear-gradient(to right, aqua, cyan, lightcyan ,lightblue);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-#canvas{
-    background-color: transparent;
-    z-index: -5;
     position: absolute;
-    margin: 0;
-    padding: 0;
-    gap: 0;
-
-    width: 100%;
-    height: 100%;
-
     top: 50%;
     left: 50%;
     translate: -50% -50%;
+
+    color: #fff;
+
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    gap: 10px 10px;
+    padding-bottom: 2vw;
+
+    div.stat {
+      border: 0.1px solid rgba(20, 20, 20, 0.9);
+      background-color: rgba(50, 60, 90, 0.8);
+      box-shadow: 5px 5px 7px rgba(50, 0, 30, 0.7);
+      border-radius: 1em;
+      margin-left: 0.9vw;
+      margin-right: 0.9vw;
+      padding: 0.3vw;
+      width: 6vw;
+      padding-left: 2vw;
+      padding-right: 2vw;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      span.stat-label {
+        font-size: 0.9vw;
+        font-weight: 200;
+        color: var(--text-primary);
+      }
+
+      span.stat-value {
+        font-size: 0.8vw;
+        font-weight: 200;
+      }
+    }
+  }
+}
+
+div.skills div#skills-list {
+    display: grid;
+    grid-template-columns: repeat(5, 10vw);
+    grid-column-start: auto;
+    gap: 2vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5vw;
+  font-weight: 200;
+  color: #fff;
+  width: 100%;
+  padding-top: 5vw;
+  padding-bottom: 0.5vw;
+  margin-top: 1em;
+
+}
+
+div.skills div#skills-list div.skill {
+    border: 0.1px solid rgba(20, 20, 20, 0.9);
+    background: rgba(50, 60, 90, 0.8);
+    box-shadow: 5px 5px 7px rgba(50, 0, 30, 0.7);
+    border-radius: 1em;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 1vw;
+    padding: 0.3vw;
+    width: 7vw;
+    height: 4vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+div.inventory {
+  h2 {
+
+    font-family: "Manga";
+    font-size: 2vw;
+    font-weight: 200;
+    color: var(--text-primary);
+    text-shadow: 5px 5px 7px rgba(150, 60, 130, 0.7);
+    margin: 0;
+
+    text-align: center;
+    left: 50%;
+  };
+  min-height: 12vw;
+  height: auto;
+}
+div.items {
+  display: grid;
+  grid-template-columns: repeat(7, 10vw);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px 10px;
+  padding-bottom: 2vw;
+
+  margin-top: 1em;
+  translate: 0% 0;
+  left: 50%;
+  div.item{
+    border: 0.1px solid rgba(20, 20, 20, 0.9);
+    background: rgba(100, 50, 95, 0.5);
+    box-shadow: 5px 5px 7px rgba(50, 0, 30, 0.3);
+    border-radius: 1em;
+    margin-left: 0.2vw;
+    margin-right: 0.2vw;
+    padding: 0.1vw;
+    width: 6vw;
+    height: 9vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+
+    transition: all 0.35s ease-in-out;
+  }
+}
+
+.gradient-blue {
+  background: linear-gradient(to right, aqua, cyan, lightcyan, lightblue);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+#canvas {
+  background-color: transparent;
+  z-index: -5;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+
+  width: 100%;
+  height: 100%;
+
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
 }
 
 .tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
 }
 
 .tooltip .tooltiptext {
-    visibility: hidden;
-    width: auto;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    padding-left: 0.5vw;
-    padding-right: 0.5vw;
-    padding-top: 0.3vw;
-    padding-bottom: 0.5vw;
-    border-radius: 6px;
-   
-    user-select: none;
+  visibility: hidden;
+  width: auto;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  padding-top: 0.3vw;
+  padding-bottom: 0.5vw;
+  border-radius: 6px;
 
-    position: absolute;
-    z-index: 1;
+  user-select: none;
+
+  position: absolute;
+  z-index: 1;
 }
 
 .tooltip div.tooltiptext {
-    width: 10vw;
+  width: 10vw;
 }
-  
+
 .tooltip:hover .tooltiptext {
-    visibility: visible;
+  visibility: visible;
 }
 
 @media only screen and (max-width: 768px) {
+  div.content {
+    height: auto;
+    min-height: 40em;
+  }
+  div.card {
+    min-height: 30em;
+    height: auto;
+  }
 
-
-    div.content {
-        height: auto;
-        min-height: 40em;
-        max-height: 50em;
-    }
-    div.card{
-        min-height: 30em;
-        max-height: 45em;
-        height: auto;
-    }
-
-
-    div.header {
-        h1{
-            font-size: 18vw;
-        }
-
-        h3{
-            font-size: 5vw;
-        }
+  div.header {
+    h1 {
+      font-size: 18vw;
     }
 
-    span.hover1:hover{
-        transform: scale(1.1);
-        font-size: scale(1.1);
+    h3 {
+      font-size: 5vw;
     }
+  }
 
-    #user{
-        h2{
-            font-size: 15vw;
-        }
-        div.stats{
-            height: 40vw;
-            width: 100%;
-            h2{
-                font-size: 4vw;
-            }
-            div.data{
-                grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
-                top: 65%;
-                left: 50%;
-                translate: -50% -50%;
-                margin-top: 8vw;
-                width: 100%;
-                text-align: center;
-                div.stat span{
-                    text-align: center;
-                    width: auto;
-                    height: 5vw;
-                    padding: 1vw;
-                    font-size: 4vw;
-                }
-            }
-        }
+  span.hover1:hover {
+    transform: scale(1.1);
+    font-size: scale(1.1);
+  }
 
-        div.skills{
-            h2{
-                font-size: 4vw;
-            }
-            ul{
-                padding-top: 5vw;
-                padding-left: 1vw;
-                padding-right: 1vw;
-            }
-            ul li {;
-                width: auto;
-                .tooltip{
-                    font-size: 4vw;
-                    height: 5vw;
-                    padding-bottom: 1vw;
-                    padding-top: 1vw;
-
-                }
-            }
-        }
-
-        /* Adjust the width and height of the user info container */
-        div.info {
-        position: relative;
+  #user {
+    h2 {
+      font-size: 15vw;
+    }
+    div.stats {
+      height: 60vw;
+      width: 100%;
+      h2 {
+        font-size: 4vw;
+      }
+      div.data {
+        grid-template-columns: repeat(4, 17vw);
+        grid-template-rows: repeat(2, 1fr);
+        top: 40%;
+        left: 47%;
+        translate: -50% -50%;
+        margin-top: 8vw;
         width: 100%;
-        height: auto;
-        min-height: 11vw;
-        max-height: 20vw;
-        gap: 0;
-        padding: 0;
-        padding-bottom: 7em;
         text-align: center;
+        align-items: center;
+        justify-content: center;
 
-        /* Adjust the avatar size and position */
-        img.avatar {
+        gap:4vw;
+        div.stat {
+            padding: 2vw;
             width: 15vw;
-            height: 15vw;
-            top: 0.5em;
-            left: 50%;
-            transform: translate(-50%, 0%);
+            height: 90%;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin-left: 1vw;
+            margin-right: 1vw;
+            span {
+                
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                padding: 1vw;
+                font-size: 4vw;
+            }
         }
-
-        /* Adjust the user name and level font sizes and positions */
-        span.user {
-            font-size: 4vw;
-            top: 3.9em;
-            left: 50%;
-            transform: translate(-50%, 0%);
-        }
-
-        span.level {
-            font-size: 2.25vw;
-            top: 10em;
-            left: 50%;
-            transform: translate(-50%, 0%);
-        }
-
-        span.title {
-            font-size: 1.9vw;
-            font-weight: 100;
-            top: 14.5em;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        }
+      }
     }
 
-    .tooltip .tooltiptext{
-        width: 20vw;
+    div.skills {
+      h2 {
+        font-size: 4vw;
+      }
+      ul {
+        padding-top: 5vw;
+        padding-left: 1vw;
+        padding-right: 1vw;
+      }
+      ul li {
+        width: auto;
+        .tooltip {
+          font-size: 4vw;
+          height: 5vw;
+          padding-bottom: 1vw;
+          padding-top: 1vw;
+        }
+      }
     }
 
-    .tooltip div.tooltiptext{
-        padding: 0;
-        width: 40vw;
-        font-size: 5vw;
-        z-index: 100;
+    .expand-button {
+      font-size: 16px;
+      line-height: 16px;
+      margin: 10px auto;
     }
+
+    div.inventory{
+        width: 100%;
+        padding: 10px;
+        height: auto;
+        h2{
+          font-size: 4vw;
+        }
+
+        #inventory-items {
+          max-height: 3vw; /* adjust to your needs */
+        }
+
+        #inventory-items.expanded {
+          max-height: 30vw; /* adjust to your needs */
+          overflow-x: auto;
+        }
+
+        div.items{
+            grid-template-columns: repeat(5, 8vw);
+            gap: 5vw;
+            margin: 1vw 3vw 0 5vw;
+            padding: 1vw;
+            div.item{
+                width: 100%;
+                height: 12vw;
+                opacity: var(--opacity);
+            }
+        }
+      }
+    
+
+    /* Adjust the width and height of the user info container */
+    div.info {
+      position: relative;
+      width: 100%;
+      height: auto;
+      min-height: 11vw;
+      max-height: 20vw;
+      gap: 0;
+      padding: 0;
+      padding-bottom: 7em;
+      text-align: center;
+
+      /* Adjust the avatar size and position */
+      img.avatar {
+        width: 15vw;
+        height: 15vw;
+        top: 0.5em;
+        left: 50%;
+        transform: translate(-50%, 0%);
+      }
+
+      /* Adjust the user name and level font sizes and positions */
+      span.user {
+        font-size: 4vw;
+        top: 3.9em;
+        left: 50%;
+        transform: translate(-50%, 0%);
+      }
+
+      span.level {
+        font-size: 2.25vw;
+        top: 10em;
+        left: 50%;
+        transform: translate(-50%, 0%);
+      }
+
+      span.title {
+        font-size: 1.9vw;
+        font-weight: 100;
+        top: 14.5em;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+  .tooltip .tooltiptext {
+    width: 20vw;
+    padding: 1vw;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tooltip div.tooltiptext {
+    padding: 0;
+    width: 40vw;
+    font-size: 5vw;
+    z-index: 100;
+  }
+
+
+}
+
+.expand-button {
+  font-size: 18px;
+  line-height: 18px;
+  margin: 0 auto;
+  cursor: pointer;
+  display: block;
+  width: 5vw;
+  border-radius: 30px;
+  box-shadow: 5 5 7 rgba(50, 0, 30, 0.7);
+  text-shadow: 5px 5px 7px rgba(150, 60, 130, 0.7);
+  border-width: 0;
+  background: linear-gradient(to right, darkcyan, rgb(90,120,170), blue, darkblue);
+  color: white;
+
+  transition: all 0.35s ease-in-out;
+}
+
+.expand-button:hover {
+  transform: scale(1.1);
+}
+
+#inventory-items {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+#inventory-items.expanded {
+  max-height: 500px; /* adjust to your needs */
+  overflow-y: auto;
+}
+
+div.footer {
+  font-family: "Roboto Serif", serif;;
+  font-size: 1.5vw;
+  color: #fff;
 }
